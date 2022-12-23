@@ -1,4 +1,4 @@
-Feature: User Login Admin
+Feature: Login Admin
 
   Scenario: Field Username dan Password Benar pada Admin
    	Given Berada Di Halaman Login Admin

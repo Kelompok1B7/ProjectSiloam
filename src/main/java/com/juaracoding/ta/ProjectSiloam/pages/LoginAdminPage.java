@@ -10,10 +10,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class LoginPage {
+public class LoginAdminPage {
     private WebDriver driver;
 
-    public LoginPage() {
+    public LoginAdminPage() {
         this.driver = DriverSingleton.getDriver();
         PageFactory.initElements(driver, this);
     }
