@@ -5,5 +5,5 @@ Feature: User Login Admin
    	When Isi username
     When Isi password
     And Klik button login
-    Then Masuk Ke Halaman Home Admin
+    Then Masuk Ke Halaman Home Sales
    
