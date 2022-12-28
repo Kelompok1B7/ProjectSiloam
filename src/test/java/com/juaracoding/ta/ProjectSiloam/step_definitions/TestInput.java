@@ -52,9 +52,9 @@ public class TestInput {
     	inputPage.clickBtnUpload();
         extentTest.log(LogStatus.PASS, "User click button Upload");
     }
-    @Then("TS06_Tetap di Halaman Input")
-    public void ts06_tetap_di_halaman_Input() {
-    	extentTest.log(LogStatus.PASS, "User Tetap di Halaman Input");
+    @Then("TS06_Validasi")
+    public void ts06_validasi() {
+    	extentTest.log(LogStatus.PASS, "User Validasi");
     }
     
  // Test Case 3
@@ -68,9 +68,9 @@ public class TestInput {
     	inputPage.clickBtnTTD_Digital();
         extentTest.log(LogStatus.PASS, "User click button TTD Digital");
     }
-    @Then("TS09_Tetap di Halaman Input")
-    public void ts09_tetap_di_halaman_Input() {
-    	extentTest.log(LogStatus.PASS, "User Tetap di Halaman Input");
+    @Then("TS09_Validasi")
+    public void ts09_validasi() {
+    	extentTest.log(LogStatus.PASS, "User Validasi");
     }
     
     // Test Case 4
@@ -102,8 +102,8 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS13_Tetap di Halaman Input")
-    public void ts13_tetap_di_halaman_Input() {
+    @Then("TS13_Validasi")
+    public void ts13_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -119,31 +119,22 @@ public class TestInput {
          extentTest.log(LogStatus.PASS, "Nama tidak diisi");
 
     	 inputPage.nomorbpjs("1546722447780760");
-         extentTest.log(LogStatus.PASS, "Nomor BPJS diisi lengkap");
 
     	 inputPage.nomorktp("3755019936362666");
-         extentTest.log(LogStatus.PASS, "Nomor KTP diisi lengkap");
 
     	 inputPage.alamat("Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No.12A, Kebon Jeruk, Kota Jakarta Barat, DKI Jakarta.");
-         extentTest.log(LogStatus.PASS, "Alamat Diisi lengkap");
 
     	 inputPage.clickBtnKota_Ktp();
-         extentTest.log(LogStatus.PASS, "Kota KTP Ditekan");
          
          inputPage.clickBtnKota_Ktp2();
-	  	 extentTest.log(LogStatus.PASS, "Kota KTP Dipilih");
 
     	 inputPage.faskesawal("Faskes Diponegoro Utara");
-         extentTest.log(LogStatus.PASS, "Faskes Awal diisi lengkap");
 
     	 inputPage.clickBtnFaskes_Tujuan();
-         extentTest.log(LogStatus.PASS, "Faskes Tujuan Ditekan");
          
          inputPage.clickBtnFaskes_Tujuan2();
-         extentTest.log(LogStatus.PASS, "Faskes Tujuan Dipilih");
          
     	 inputPage.alasan("Faskes awal terlalu jauh dari rumah");
-         extentTest.log(LogStatus.PASS, "Alasan diisi lengkap");
     }
     
     @When("TS16_Klik button Simpan Data")
@@ -151,8 +142,8 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS17_Tetap di Halaman Input")
-    public void ts17_tetap_di_halaman_Input() {
+    @Then("TS17_Validasi")
+    public void ts17_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -170,34 +161,25 @@ public class TestInput {
     @When("TS19_Tidak Mengisi Nomor BPJS")
     public void ts19_tidak_mengisi_nomor_bpjs() {
     	 inputPage.nama("Elma Lucyana Christin");
-         extentTest.log(LogStatus.PASS, "Nama diisi lengkap");
 
     	 inputPage.nomorbpjs("");
          extentTest.log(LogStatus.PASS, "Nomor BPJS tidak diisi");
 
     	 inputPage.nomorktp("3755019936362666");
-         extentTest.log(LogStatus.PASS, "Nomor KTP diisi lengkap");
 
     	 inputPage.alamat("Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No.12A, Kebon Jeruk, Kota Jakarta Barat, DKI Jakarta.");
-         extentTest.log(LogStatus.PASS, "Alamat diisi lengkap");
 
     	 inputPage.clickBtnKota_Ktp();
-         extentTest.log(LogStatus.PASS, "Kota KTP Ditekan");
          
          inputPage.clickBtnKota_Ktp2();
-	  	 extentTest.log(LogStatus.PASS, "Kota KTP Dipilih");
     
     	 inputPage.faskesawal("Faskes Diponegoro Utara");
-         extentTest.log(LogStatus.PASS, "Faskes Awal diisi lengkap");
 
     	 inputPage.clickBtnFaskes_Tujuan();
-         extentTest.log(LogStatus.PASS, "Faskes Tujuan Ditekan");
          
          inputPage.clickBtnFaskes_Tujuan2();
-         extentTest.log(LogStatus.PASS, "Faskes Tujuan Dipilih");
          
     	 inputPage.alasan("Faskes awal terlalu jauh dari rumah");
-         extentTest.log(LogStatus.PASS, "Alasan diisi lengkap");
     }
     
     @When("TS20_Klik button Simpan Data")
@@ -205,8 +187,8 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS21_Tetap di Halaman Input")
-    public void ts21_tetap_di_halaman_Input() {
+    @Then("TS21_Validasi")
+    public void ts21_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -223,34 +205,25 @@ public class TestInput {
     @When("TS23_Tidak Mengisi Nomor KTP")
     public void ts23_tidak_mengisi_nomor_ktp() {
     	 inputPage.nama("Elma Lucyana Christin");
-         extentTest.log(LogStatus.PASS, "Nama diisi lengkap");
 
     	 inputPage.nomorbpjs("1546722447780760");
-         extentTest.log(LogStatus.PASS, "Nomor BPJS diisi lengkap");
 
     	 inputPage.nomorktp("");
          extentTest.log(LogStatus.PASS, "Nomor KTP tidak diisi");
 
     	 inputPage.alamat("Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No.12A, Kebon Jeruk, Kota Jakarta Barat, DKI Jakarta.");
-         extentTest.log(LogStatus.PASS, "Alamat diisi lengkap");
 
     	 inputPage.clickBtnKota_Ktp();
-         extentTest.log(LogStatus.PASS, "Kota KTP Ditekan");
          
          inputPage.clickBtnKota_Ktp2();
-	  	 extentTest.log(LogStatus.PASS, "Kota KTP Dipilih");
 
     	 inputPage.faskesawal("Faskes Diponegoro Utara");
-         extentTest.log(LogStatus.PASS, "Faskes Awal diisi lengkap");
 
     	 inputPage.clickBtnFaskes_Tujuan();
-         extentTest.log(LogStatus.PASS, "Faskes Tujuan Ditekan");
          
          inputPage.clickBtnFaskes_Tujuan2();
-         extentTest.log(LogStatus.PASS, "Faskes Tujuan Dipilih");
          
     	 inputPage.alasan("Faskes awal terlalu jauh dari rumah");
-         extentTest.log(LogStatus.PASS, "Alasan diisi lengkap");
     }
     
     @When("TS24_Klik button Simpan Data")
@@ -258,8 +231,8 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS25_Tetap di Halaman Input")
-    public void ts25_tetap_di_halaman_Input() {
+    @Then("TS25_Validasi")
+    public void ts25_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -276,34 +249,25 @@ public class TestInput {
     @When("TS27_Tidak Mengisi Alamat")
     public void ts27_tidak_mengisi_alamat() {
     	 inputPage.nama("Elma Lucyana Christin");
-         extentTest.log(LogStatus.PASS, "Nama diisi lengkap");
 
     	 inputPage.nomorbpjs("1546722447780760");
-         extentTest.log(LogStatus.PASS, "Nomor BPJS diisi lengkap");
     
     	 inputPage.nomorktp("3755019936362666");
-         extentTest.log(LogStatus.PASS, "Nomor KTP diisi lengkap");
 
     	 inputPage.alamat("");
          extentTest.log(LogStatus.PASS, "Alamat tidak diisi");
 
     	 inputPage.clickBtnKota_Ktp();
-         extentTest.log(LogStatus.PASS, "Kota KTP Ditekan");
          
          inputPage.clickBtnKota_Ktp2();
-	  	 extentTest.log(LogStatus.PASS, "Kota KTP Dipilih");
 
     	 inputPage.faskesawal("Faskes Diponegoro Utara");
-         extentTest.log(LogStatus.PASS, "Faskes Awal diisi lengkap");
 
     	 inputPage.clickBtnFaskes_Tujuan();
-         extentTest.log(LogStatus.PASS, "Faskes Tujuan Ditekan");
          
          inputPage.clickBtnFaskes_Tujuan2();
-         extentTest.log(LogStatus.PASS, "Faskes Tujuan Dipilih");
          
     	 inputPage.alasan("Faskes awal terlalu jauh dari rumah");
-         extentTest.log(LogStatus.PASS, "Alasan diisi lengkap");
     }
     
     @When("TS28_Klik button Simpan Data")
@@ -311,8 +275,8 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS29_Tetap di Halaman Input")
-    public void ts29_tetap_di_halaman_Input() {
+    @Then("TS29_Validasi")
+    public void ts29_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -330,31 +294,23 @@ public class TestInput {
     @When("TS31_Tidak Mengisi Kota KTP")
     public void ts31_kota_ktp_tidak_diisi() {
     	 inputPage.nama("Elma Lucyana Christin");
-         extentTest.log(LogStatus.PASS, "Nama diisi lengkap");
 
     	 inputPage.nomorbpjs("1546722447780760");
-         extentTest.log(LogStatus.PASS, "Nomor BPJS diisi lengkap");
 
     	 inputPage.nomorktp("3755019936362666");
-         extentTest.log(LogStatus.PASS, "Nomor KTP diisi lengkap");
 
     	 inputPage.alamat("Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No.12A, Kebon Jeruk, Kota Jakarta Barat, DKI Jakarta.");
-         extentTest.log(LogStatus.PASS, "Alamat diisi lengkap");
 
     	 inputPage.clickBtnKota_Ktp();
          extentTest.log(LogStatus.PASS, "Kota KTP ditekan");
 
     	 inputPage.faskesawal("Faskes Diponegoro Utara");
-         extentTest.log(LogStatus.PASS, "Faskes Awal diisi lengkap");
 
     	 inputPage.clickBtnFaskes_Tujuan();
-         extentTest.log(LogStatus.PASS, "Faskes Tujuan Ditekan");
          
          inputPage.clickBtnFaskes_Tujuan2();
-         extentTest.log(LogStatus.PASS, "Faskes Tujuan Dipilih");
          
     	 inputPage.alasan("Faskes awal terlalu jauh dari rumah");
-         extentTest.log(LogStatus.PASS, "Alasan diisi lengkap");
     }
     
     @When("TS32_Klik button Simpan Data")
@@ -362,8 +318,8 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS33_Tetap di Halaman Input")
-    public void ts33_tetap_di_halaman_Input() {
+    @Then("TS33_Validasi")
+    public void ts33_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -380,34 +336,25 @@ public class TestInput {
     @When("TS35_Tidak Mengisi Faskes Awal")
     public void ts35_faskes_awal_tidak_diisi() {
     	 inputPage.nama("Elma Lucyana Christin");
-         extentTest.log(LogStatus.PASS, "Nama diisi lengkap");
 
     	 inputPage.nomorbpjs("1546722447780760");
-         extentTest.log(LogStatus.PASS, "Nomor BPJS diisi lengkap");
 
     	 inputPage.nomorktp("3755019936362666");
-         extentTest.log(LogStatus.PASS, "Nomor KTP diisi lengkap");
 
     	 inputPage.alamat("Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No.12A, Kebon Jeruk, Kota Jakarta Barat, DKI Jakarta.");
-         extentTest.log(LogStatus.PASS, "Alamat diisi lengkap");
 
     	 inputPage.clickBtnKota_Ktp();
-         extentTest.log(LogStatus.PASS, "Kota KTP Ditekan");
          
          inputPage.clickBtnKota_Ktp2();
-	  	 extentTest.log(LogStatus.PASS, "Kota KTP Dipilih");
 	  	 
     	 inputPage.faskesawal("");
          extentTest.log(LogStatus.PASS, "Faskes awal tidak diisi");
 
     	 inputPage.clickBtnFaskes_Tujuan();
-         extentTest.log(LogStatus.PASS, "Faskes Tujuan Ditekan");
          
          inputPage.clickBtnFaskes_Tujuan2();
-         extentTest.log(LogStatus.PASS, "Faskes Tujuan Dipilih");
          
     	 inputPage.alasan("Faskes awal terlalu jauh dari rumah");
-         extentTest.log(LogStatus.PASS, "Alasan diisi lengkap");
     }
     
     @When("TS36_Klik button Simpan Data")
@@ -415,8 +362,8 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS37_Tetap di Halaman Input")
-    public void ts37_tetap_di_halaman_Input() {
+    @Then("TS37_Validasi")
+    public void ts37_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -433,25 +380,18 @@ public class TestInput {
     @When("TS39_Tidak Mengisi Faskes Tujuan")
     public void ts39_faskes_tujuan_tidak_diisi() {
     	 inputPage.nama("Elma Lucyana Christin");
-         extentTest.log(LogStatus.PASS, "Nama diisi lengkap");
 
     	 inputPage.nomorbpjs("1546722447780760");
-         extentTest.log(LogStatus.PASS, "Nomor BPJS diisi lengkap");
 
     	 inputPage.nomorktp("3755019936362666");
-         extentTest.log(LogStatus.PASS, "Nomor KTP diisi lengkap");
 
     	 inputPage.alamat("Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No.12A, Kebon Jeruk, Kota Jakarta Barat, DKI Jakarta.");
-         extentTest.log(LogStatus.PASS, "Alamat diisi lengkap");
 
     	 inputPage.clickBtnKota_Ktp();
-         extentTest.log(LogStatus.PASS, "Kota KTP Ditekan");
          
          inputPage.clickBtnKota_Ktp2();
-	  	 extentTest.log(LogStatus.PASS, "Kota KTP Dipilih");
 
     	 inputPage.faskesawal("Faskes Diponegoro Utara");
-         extentTest.log(LogStatus.PASS, "Faskes Awal diisi lengkap");
 
     	 inputPage.clickBtnFaskes_Tujuan();
          extentTest.log(LogStatus.PASS, "Faskes Tujuan Ditekan");
@@ -462,8 +402,8 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS41_Tetap di Halaman Input")
-    public void ts41_tetap_di_halaman_Input() {
+    @Then("TS41_Validasi")
+    public void ts41_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -480,31 +420,22 @@ public class TestInput {
     @When("TS43_Tidak Mengisi Alasan")
     public void ts43_alasan_tidak_diisi() {
     	 inputPage.nama("Elma Lucyana Christin");
-         extentTest.log(LogStatus.PASS, "Nama diisi lengkap");
 
     	 inputPage.nomorbpjs("1546722447780760");
-         extentTest.log(LogStatus.PASS, "Nomor BPJS diisi lengkap");
 
     	 inputPage.nomorktp("3755019936362666");
-         extentTest.log(LogStatus.PASS, "Nomor KTP diisi lengkap");
 
     	 inputPage.alamat("Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No.12A, Kebon Jeruk, Kota Jakarta Barat, DKI Jakarta.");
-         extentTest.log(LogStatus.PASS, "Alamat diisi lengkap");
 
     	 inputPage.clickBtnKota_Ktp();
-         extentTest.log(LogStatus.PASS, "Kota KTP Ditekan");
          
          inputPage.clickBtnKota_Ktp2();
-	  	 extentTest.log(LogStatus.PASS, "Kota KTP Dipilih");
 
     	 inputPage.faskesawal("Faskes Diponegoro Utara");
-         extentTest.log(LogStatus.PASS, "Faskes Awal diisi lengkap");
 
     	 inputPage.clickBtnFaskes_Tujuan();
-         extentTest.log(LogStatus.PASS, "Faskes Tujuan Ditekan");
 
     	 inputPage.clickBtnFaskes_Tujuan2();
-         extentTest.log(LogStatus.PASS, "Faskes Tujuan Dipilih");
 
     	 inputPage.alasan("");
          extentTest.log(LogStatus.PASS, "Alasan tidak diisi");
@@ -515,8 +446,8 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS45_Tetap di Halaman Input")
-    public void ts45_tetap_di_halaman_Input() {
+    @Then("TS45_Validasi")
+    public void ts45_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -554,8 +485,8 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS49_Tetap di Halaman Input")
-    public void ts49_tetap_di_halaman_Input() {
+    @Then("TS49_Validasi")
+    public void ts49_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -593,8 +524,8 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS53_Tetap di Halaman Input")
-    public void ts53_tetap_di_halaman_Input() {
+    @Then("TS53_Validasi")
+    public void ts53_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -632,8 +563,8 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS57_Tetap di Halaman Input")
-    public void ts57_tetap_di_halaman_Input() {
+    @Then("TS57_Validasi")
+    public void ts57_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -671,8 +602,8 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS61_Tetap di Halaman Input")
-    public void ts61_tetap_di_halaman_Input() {
+    @Then("TS61_Validasi")
+    public void ts61_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -716,8 +647,8 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS65_Tetap di Halaman Input")
-    public void ts65_tetap_di_halaman_Input() {
+    @Then("TS65_Validasi")
+    public void ts65_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -761,8 +692,8 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS69_Tetap di Halaman Input")
-    public void ts69_tetap_di_halaman_Input() {
+    @Then("TS69_Validasi")
+    public void ts69_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -800,8 +731,8 @@ public class TestInput {
 
     }
     
-    @Then("TS72_Tetap di Halaman Input")
-    public void ts72_tetap_di_halaman_Input() {
+    @Then("TS72_Validasi")
+    public void ts72_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -839,8 +770,8 @@ public class TestInput {
 
     }
     
-    @Then("TS75_Tetap di Halaman Input")
-    public void ts75_tetap_di_halaman_Input() {
+    @Then("TS75_Validasi")
+    public void ts75_validasi() {
     	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
@@ -858,10 +789,10 @@ public class TestInput {
     public void ts77_mengisi_semua_field_dengan_benar() {
     	 inputPage.nama("Elma Lucyana Christine");
 
-    	 inputPage.nomorbpjs("2546722447780760");
+    	 inputPage.nomorbpjs("0546722447780760");
          extentTest.log(LogStatus.PASS, "Nomor BPJS diisi kurang dari 13 karater");
 
-    	 inputPage.nomorktp("4755019936362666");
+    	 inputPage.nomorktp("0755019936362666");
 
     	 inputPage.alamat("Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No.12A, Kebon Jeruk, Kota Jakarta Barat, DKI Jakarta.");
 
@@ -884,9 +815,10 @@ public class TestInput {
     	inputPage.clickBtnSimpan_Data();
         extentTest.log(LogStatus.PASS, "User click button Simpan Data");
     }
-    @Then("TS79_Berpindah ke Halaman Upload")
-    public void ts79_berpindah_ke_halaman_upload() {
+    @Then("TS79_Validasi")
+    public void ts79_validasi() {
     	extentTest.log(LogStatus.PASS, "User Berpindah ke halaman selanjutnya");
+    	driver.close();
     }
     
 }
