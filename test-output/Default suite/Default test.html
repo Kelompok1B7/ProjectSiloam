@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>21/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Dec 26 13:38:43 WIB 2022</td>
+<td>Started on:</td><td>Wed Dec 28 16:49:03 WIB 2022</td>
 </tr>
-<tr><td>Total time:</td><td>31 seconds (31497 ms)</td>
+<tr><td>Total time:</td><td>544 seconds (544483 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,24 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC21_Mengisi semua field dengan benar", "User Input Data"</td>
+<td><div><pre>java.lang.ArrayIndexOutOfBoundsException: Index 21 out of bounds for length 21
+	at com.juaracoding.ta.ProjectSiloam.step_definitions.Hooks.setUp(Hooks.java:26)
+</pre></div><a href='#' onClick='toggleBox("stack-trace299004234", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace299004234'><pre>java.lang.ArrayIndexOutOfBoundsException: Index 21 out of bounds for length 21
+	at com.juaracoding.ta.ProjectSiloam.step_definitions.Hooks.setUp(Hooks.java:26)
+</pre></div></td>
+<td>0</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -77,27 +95,107 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Field Username dan Password Benar pada Admin", "User Login Admin"</td>
 <td></td>
+<td>126</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC14_Mengisi nomor KTP dengan alphabet", "User Input Data"</td>
+<td></td>
+<td>15</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC06_Tidak Mengisi Nomor BPJS", "User Input Data"</td>
+<td></td>
+<td>27</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC09_Tidak Mengisi Kota KTP", "User Input Data"</td>
+<td></td>
+<td>21</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC19_Kota KTP dan Faskes Tujuan di Kota yang Sama", "User Input Data"</td>
+<td></td>
+<td>19</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC16_Mengisi nomor KTP lebih dari 16 karakter", "User Input Data"</td>
+<td></td>
+<td>21</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC12_Tidak Mengisi Alasan", "User Input Data"</td>
+<td></td>
+<td>21</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC18_Mengisi nomor KTP kurang dari 16 karakter", "User Input Data"</td>
+<td></td>
+<td>18</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC07_Tidak Mengisi Nomor KTP", "User Input Data"</td>
+<td></td>
+<td>22</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC08_Tidak Mengisi Alamat", "User Input Data"</td>
+<td></td>
+<td>24</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC10_Tidak Mengisi Faskes Awal", "User Input Data"</td>
+<td></td>
 <td>20</td>
 <td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
 <tr>
-<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Memasuki Halaman Upload", "User Input Data"</td>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC04_Tidak Mengisi Apapun", "User Input Data"</td>
 <td></td>
-<td>0</td>
+<td>11</td>
 <td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
 <tr>
-<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Memasuki Halaman Input", "User Input Data"</td>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC03_Memasuki Halaman TTD Digital", "User Input Data"</td>
 <td></td>
 <td>1</td>
 <td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
 <tr>
-<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tidak Mengisi Apapun", "User Input Data"</td>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC11_Tidak Mengisi Faskes Tujuan", "User Input Data"</td>
 <td></td>
-<td>2</td>
+<td>17</td>
 <td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
 <tr>
-<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Memasuki Halaman TTD Digital", "User Input Data"</td>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC13_Mengisi nomor BPJS dengan alphabet", "User Input Data"</td>
 <td></td>
-<td>0</td>
+<td>13</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC01_Memasuki Halaman Input", "User Input Data"</td>
+<td></td>
+<td>5</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC02_Memasuki Halaman Upload", "User Input Data"</td>
+<td></td>
+<td>3</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC20_Kota KTP dan Faskes Tujuan di Kota yang Berbeda", "User Input Data"</td>
+<td></td>
+<td>16</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC05_Tidak Mengisi Nama", "User Input Data"</td>
+<td></td>
+<td>26</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC15_Mengisi nomor BPJS lebih dari 13 karakter", "User Input Data"</td>
+<td></td>
+<td>14</td>
+<td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
+<tr>
+<td title='com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCC17_Mengisi nomor BPJS kurang dari 13 karakter", "User Input Data"</td>
+<td></td>
+<td>19</td>
 <td>com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest@35aea049</td></tr>
 </table><p>
 </body>
