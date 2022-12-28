@@ -57,13 +57,23 @@ public class InputPage {
    @FindBy(xpath = "//option[@value='KABUPATEN BANDUNG']")
    WebElement btnKota_Ktp2;  
    
-   
+ //option[@value='KOTA JAKARTA SELATAN']
+   @FindBy(xpath = "//option[@value='KOTA JAKARTA BARAT']")
+   WebElement btnKota_Ktp3;  
    
    @FindBy(xpath = "//input[@id='origin_faskes']")
    WebElement faskesawal;
    
    @FindBy(xpath = "//span[@id='select2-destination_faskes-container']")
    WebElement btnFaskes_Tujuan;
+   
+ //option[@value='1||Clinic Meruya||Kota Jakarta Barat']
+   @FindBy(xpath = "//option[@value='1||Clinic Meruya||Kota Jakarta Barat']")
+   WebElement btnFaskes_Tujuan2;
+   
+ //textarea[@id='reason']
+   @FindBy(xpath = "//textarea[@id='reason']")
+   WebElement alasan;
    
    @FindBy(xpath = "//button[@type='submit']")
    WebElement btnSimpan_Data;
@@ -98,15 +108,25 @@ public class InputPage {
     public void clickBtnKota_Ktp(){
         btnKota_Ktp.click();
     }
-//    public void clickBtnKota_Ktp2(){
-//        btnKota_Ktp2.click();
-//    }
+    public void clickBtnKota_Ktp2(){
+        btnKota_Ktp2.click();
+    }
+    public void clickBtnKota_Ktp3(){
+        btnKota_Ktp3.click();
+    }
     public void faskesawal(String faskesawal){
         this.faskesawal.sendKeys(faskesawal);
     }
     public void clickBtnFaskes_Tujuan(){
         btnFaskes_Tujuan.click();
     }
+    public void clickBtnFaskes_Tujuan2(){
+        btnFaskes_Tujuan2.click();
+    }
+    public void alasan(String alasan){
+        this.alasan.sendKeys(alasan);
+    }
+    
     public void clickBtnSimpan_Data(){
         btnSimpan_Data.click();
     }
