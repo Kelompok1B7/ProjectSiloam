@@ -2,8 +2,8 @@ package com.juaracoding.ta.ProjectSiloam.utils;
 
 public enum TestScenarios {
 
-    T1("Field Username dan Password Benar pada Admin");
-//	T2("Mengakses Tidak Masukan Username dan Masukan Password Salah"),
+    T1("Field Username dan Password Benar pada Admin"),
+	T2("Field Username dan Password Benar pada Sales");
 //	T3("Mengakses Tidak Masukan Password dan Masukan Username Salah");
 //    T4("Mengakses Tidak Masukan Username dan Masukan Password Benar"),
 //    T5("Mengakses Tidak Masukan Password dan Masukan Username Benar"),

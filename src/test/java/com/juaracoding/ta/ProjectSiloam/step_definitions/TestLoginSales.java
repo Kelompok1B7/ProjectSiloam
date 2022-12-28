@@ -1,6 +1,6 @@
 package com.juaracoding.ta.ProjectSiloam.step_definitions;
 
-import com.juaracoding.ta.ProjectSiloam.pages.LoginPage;
+import com.juaracoding.ta.ProjectSiloam.pages.LoginSalesPage;
 import com.juaracoding.ta.ProjectSiloam.step_definitions.Hooks;
 import com.juaracoding.ta.ProjectSiloam.utils.Constants;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -13,41 +13,41 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
-public class TestLogin {
+public class TestLoginSales {
 	
     private static WebDriver driver;
     private static ExtentTest extentTest;
-    private LoginPage loginPage = new LoginPage();
+    private LoginSalesPage loginPage = new LoginSalesPage();
 
-   public TestLogin() {
+   public TestLoginSales() {
         driver = Hooks.driver;
         extentTest = Hooks.extentTest;
     }
     //Test Case 1	
-    @Given("Berada Di Halaman Login Admin")
+    @Given("Berada Di Halaman Login Sales")
     public void Isi_username() {
     	driver.get(Constants.URL);
         extentTest.log(LogStatus.PASS,"User masuk Web login Siloam");
     }
     @When("Isi username")
     public void isi_username() {
-    	 loginPage.usernameA("admindika");
-         extentTest.log(LogStatus.PASS, "User isi username benar");
+    	 loginPage.usernameA("D6200927");
+         extentTest.log(LogStatus.PASS, "Isi username benar");
     }
     @When("Isi password")
     public void isi_password() {
-    	 loginPage.passwordA("d1k4@passw0rd");
-         extentTest.log(LogStatus.PASS, "User isi password benar");
+    	 loginPage.passwordA("D6200927");
+         extentTest.log(LogStatus.PASS, "Isi password benar");
     }
     @When("Klik button login")
     public void klik_button_login() {
     	loginPage.clickBtnLogin();
-        extentTest.log(LogStatus.PASS, "User click button login");
+        extentTest.log(LogStatus.PASS, "Klik button login");
     }
-    @Then("Masuk Ke Halaman Home Admin")
+    @Then("Masuk Ke Halaman Home Sales")
     public void masuk_ke_halaman_Home_Admin() {
-    	Assert.assertEquals(loginPage.getTxtPleaseFill(), "please fill out this field");
-    	extentTest.log(LogStatus.PASS, "User Mendapatkan Informasi Username Dan Password Tidak Boleh Kosong");
+    	Assert.assertEquals(loginPage.getTxtDashbaord(),"Home");
+    	extentTest.log(LogStatus.PASS, "Masuk Ke Halaman Home Sales");
     	driver.close();
     }
 }
