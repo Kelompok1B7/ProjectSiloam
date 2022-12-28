@@ -3,13 +3,13 @@ Feature: Login Admin
 		Scenario: Url Invalid
    	Given Buka browser
    	When Isi url salah
-    And Klik search salah
+    And Klik search
     Then Tidak menampilkan Url yang ingin dikunjungi
     
     Scenario: Url Valid
    	Given Buka browser
    	When Isi url benar
-    And Klik search benar
+    And Klik search
     Then Menampilkan Url yang ingin dikunjungi
 
  		Scenario: Field Username dan Password Kosong pada Admin

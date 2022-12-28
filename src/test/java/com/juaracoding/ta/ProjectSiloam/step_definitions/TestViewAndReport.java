@@ -1,13 +1,7 @@
 package com.juaracoding.ta.ProjectSiloam.step_definitions;
 
-import java.awt.RenderingHints.Key;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-
 import com.juaracoding.ta.ProjectSiloam.pages.LoginSalesPage;
 import com.juaracoding.ta.ProjectSiloam.pages.ViewAndExportPage;
 import com.juaracoding.ta.ProjectSiloam.utils.Constants;
@@ -19,7 +13,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class TestViewAndReport {
-
 	private static WebDriver driver;
     private static ExtentTest extentTest;
     private ViewAndExportPage ViewExportPage = new ViewAndExportPage();
@@ -30,8 +23,8 @@ public class TestViewAndReport {
    
 	// Test Case 1
 	@Given("Masuk Ke Halaman View&Export")
-	public void masuk_ke_halaman_view_report() {
-		driver.get(Constants.URLA);
+	public void masuk_ke_halaman_view_export() {
+		driver.get(Constants.URLVR);
 	    extentTest.log(LogStatus.PASS,"Masuk Ke Halaman View&Export");
 	}
 	@When("Start date kosong")
@@ -140,13 +133,12 @@ public class TestViewAndReport {
 	    Thread.sleep(1000);
 	}
 	@Then("Menampilkan PDF Aggrement")
-	public void menampilkan_pdf_aggrement() {
+	public void menampilkan_pdf_aggrement() { 
 		Assert.assertEquals(ViewExportPage.getTxtPreview(),"");
 	   	extentTest.log(LogStatus.PASS, "Menampilkan PDF Aggrement");
 	}
 	
 	//Test View Data
-	
 	@When("Klik view")
 	public void klik_view_data() {
 		ViewExportPage.clickBtnView();
@@ -192,10 +184,10 @@ public class TestViewAndReport {
 			extentTest.log(LogStatus.PASS, "Klik preview data");
 			Thread.sleep(1000);
 			}
-		@Then("Menampilkan PDF tapi tidak menampilkan gambar Before dan After")
+		@Then("Menampilkan PDF gambar Before dan After")
 		public void menampilkan_pdf_tapi_tidak_menampilkan_gambar_Before_dan_After() {
-			Assert.assertEquals(ViewExportPage.getTxtPreview(),"tidak menampilkan gambar Before dan After");
-			extentTest.log(LogStatus.PASS,"Menampilkan PDF tapi tidak menampilkan gambar Before dan After");
+			Assert.assertEquals(ViewExportPage.getTxtPreview(),"Tidak menampilkan gambar Before dan After");
+			extentTest.log(LogStatus.PASS,"Menampilkan PDF gambar Before dan After");
 				}
 			
 		// Test Back View Data
@@ -218,7 +210,7 @@ public class TestViewAndReport {
 }
 			@Then("Menampilkan Notice Harus Klik button filter")
 			public void menampilkan_notice_harus_klik_button_filter() {
-				Assert.assertEquals(ViewExportPage.getTxtViewExport(),"button filter");
+				Assert.assertEquals(ViewExportPage.getTxtViewExport(),"PERINGATAN! Harus klik button filter dahulu");
 			   	extentTest.log(LogStatus.PASS,"Menampilkan Notice Harus Klik button filter");
 				}
 			
@@ -250,5 +242,30 @@ public class TestViewAndReport {
 			public void refresh_pada_halaman_view_export() {
 				Assert.assertEquals(ViewExportPage.getTxtViewExport(),"View & Export");
 			   	extentTest.log(LogStatus.PASS,"Refresh Pada Halaman View & Export");
+				}
+			
+			//Logout
+			@Given("Berada Di Halaman Home Admin")
+			public void Berada_Di_Halaman_Home_Admin() {
+				driver.get(Constants.URLH);
+			    extentTest.log(LogStatus.PASS,"Berada Di Halaman Home Admin");
+			}
+			@When("klik User Administrator")
+			public void klik_User_Administrator() {
+				ViewExportPage.clickBtnAdm();
+				extentTest.log(LogStatus.PASS, "klik User Administrator");
+				}
+			@When("klik logout")
+			public void klik_logout() {
+				ViewExportPage.clickBtnLogout();
+				extentTest.log(LogStatus.PASS, "klik logout");
+				}
+			@Then("Kembali Ke Halaman Login")
+			public void Kembali_Ke_Halaman_Login() {
+				String siloam = "DIKA | SILOAM";
+				
+				Assert.assertEquals(ViewExportPage.getTxtLogin(),"",siloam);
+				//Assert.assertEquals(ViewExportPage.getTxtLogin(),"");
+			   	extentTest.log(LogStatus.PASS,"Kembali Ke Halaman Login");
 				}
 }

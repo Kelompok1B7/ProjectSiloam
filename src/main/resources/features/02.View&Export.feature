@@ -57,7 +57,7 @@ Then Menampilkan Gambar After
 Scenario: Preview Data
 Given Berada view data
 When Klik preview data
-Then Menampilkan PDF tapi tidak menampilkan gambar Before dan After
+Then Menampilkan PDF gambar Before dan After
 
 Scenario: Back View Data
 Given Berada view data
@@ -136,7 +136,7 @@ And Klik button filter
 And Klik button download
 Then Data Terdownload format zip 
 
-Scenario: Download Data
+Scenario: Refresh Data
 Given Masuk Ke Halaman View&Export
 When Start date benar
 And End date benar
@@ -146,6 +146,6 @@ Then Refresh Pada Halaman View & Export
 
  Scenario: Logout Admin
    	Given Berada Di Halaman Home Admin
-   	When klik pojok kanan atas
+   	When klik User Administrator
     When klik logout
     Then Kembali Ke Halaman Login

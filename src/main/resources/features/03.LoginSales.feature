@@ -49,9 +49,9 @@ Feature: Login Sales
     And Klik button login
     Then Masuk Ke Halaman Home Sales
     
-    Scenario: Logout Sales
-   	Given Berada Di Halaman Home Sales
-   	When klik pojok kanan atas
-    When klik logout
-    Then Kembali Ke Halaman Login
+    #Scenario: Logout Sales
+   #	Given Berada Di Halaman Home Sales
+   #	When klik pojok kanan atas
+    #When klik logout
+    #Then Kembali Ke Halaman Login
     

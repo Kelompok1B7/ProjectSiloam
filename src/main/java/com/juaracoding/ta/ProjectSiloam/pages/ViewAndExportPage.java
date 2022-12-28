@@ -1,9 +1,11 @@
 package com.juaracoding.ta.ProjectSiloam.pages;
 
+
+
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -16,6 +18,12 @@ public class ViewAndExportPage {
         this.driver = DriverSingleton.getDriver();
         PageFactory.initElements(driver, this);
 	}
+	//LogOut
+	@FindBy(xpath = "//span[@class='d-none d-md-inline']")
+	   WebElement btnUserAdm;
+	@FindBy(xpath = "//a[@class='dropdown-item']")
+	   WebElement btnLogout;
+	
 	// View & Export
 	@FindBy(xpath = "//input[@id='datepicker']")
 	   WebElement sdate;
@@ -47,20 +55,31 @@ public class ViewAndExportPage {
 	@FindBy(xpath = "//a[@class='btn btn-danger']")
 	   WebElement btnViewBack;
 	
-	
+	//ALERT
+	@FindBy(xpath = "//b[normalize-space()='DIKA | SILOAM']")
+	   WebElement txtLogin;
 	@FindBy(xpath = "//h1[@class='page-header']")
 	   WebElement txtViewExport;
 	@FindBy(xpath = "//body//img")
 	   WebElement previewImage;
 	
-	public void setStartDate(String sdate){
-		 
+	//LogOut
+	public void clickBtnAdm(){
+        btnUserAdm.click();
+    }public void clickBtnLogout(){
+        btnLogout.click();
+    }
+    public String getTxtLogin(){
+        return txtLogin.getText();
+    }
+	//View&Export
+	public void setStartDate(String sdate) {
         this.sdate.sendKeys(sdate);
-        this.sdate.sendKeys(Keys.ENTER);
+        this.sdate.sendKeys(Keys.TAB);
     }
     public void setEndDate(String edate){
         this.edate.sendKeys(edate);
-        this.sdate.sendKeys(Keys.ENTER);
+        this.edate.sendKeys(Keys.TAB);
     }
     public void clickBtnFilter(){
         btnFilter.click();
@@ -79,41 +98,37 @@ public class ViewAndExportPage {
     }
     public void clickBtnAwal(){
         btnAwal.click();
+        //driver.actions().keyDown(protractor.Key.CONTROL).sendKeys('w').perform();
     }
     public void clickBtnTujuan(){
         btnTujuan.click();
+        //this.btnTujuan.sendKeys(Keys.CONTROL + "w");
     }
     public void clickBtnPDF(){
         btnPDF.click();
+        //this.btnPDF.sendKeys(Keys.CONTROL + "w");
     }
-  
     // View Data
     public void clickBefore(){
         imgViewBefore.click();
+        //this.imgViewBefore.sendKeys(Keys.CONTROL + "w");
     }
     public void clickAfter(){
         imgViewAfter.click();
+       // this.imgViewAfter.sendKeys(Keys.CONTROL + "w");
     }
     public void clickBtnPreview(){
         btnPreviewData.click();
+       // this.btnPreviewData.sendKeys(Keys.CONTROL + "w");
     }
     public void clickBtnViewBack(){
         btnViewBack.click();
     }
-    
     public String getTxtViewExport(){
       return txtViewExport.getText();
   }
     public String getTxtPreview(){
     return previewImage.getText();
     }
-//    public String getTxtPleaseFill(){
-//        return "please fill out this field";
-//    }
-//    public String getTxtInvalidCredentials(){
-//        return txtWrongUsernamePassword.getText();
-//    }
-//    public String getTxtDashbaord(){
-//        return txtDashboard.getText();
-//    }
+
 }

@@ -6,7 +6,7 @@
       <class name="com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="21 26 31 42"/>
+          <include name="runScenario" invocation-numbers="7 8 9 10 11 12 13"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.juaracoding.ta.ProjectSiloam.step_definitions.RunnerTest -->

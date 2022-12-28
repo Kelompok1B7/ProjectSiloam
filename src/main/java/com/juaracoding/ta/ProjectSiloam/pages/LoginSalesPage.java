@@ -27,14 +27,12 @@ public class LoginSalesPage {
    @FindBy(xpath = "//button[@type='submit']")
    WebElement btnLogin;
     
-   String txtPleaseFill = "please fill out this field";
-    
    @FindBy(xpath = "//div[@class='alert alert-danger alert-dismissable']")
     WebElement txtWrongUsernamePassword;
    
    @FindBy(xpath = "//h1[@class='page-header']")
     WebElement txtDashboard;
-
+ //h1[@class='page-header']
     public void usernameA(String username){
         this.username.sendKeys(username);
     }
@@ -46,12 +44,10 @@ public class LoginSalesPage {
     }
     public String getTxtPleaseFill(){
         return "please fill out this field";
+    } public String getTxtWrongUserPass(){
+        return "Wrong username or password!";
     }
-    public String getTxtInvalidCredentials(){
-        return txtWrongUsernamePassword.getText();
-    }
-    public String getTxtDashbaord(){
+    public String getTxtDashbaordS(){
         return txtDashboard.getText();
     }
-    
 }

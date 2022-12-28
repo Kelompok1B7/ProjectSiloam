@@ -23,32 +23,64 @@ public class TestLoginSales {
         driver = Hooks.driver;
         extentTest = Hooks.extentTest;
     }
+   //Login Duplicate Admin
+   @When("Klik button login")
+   public void klik_button_login() {
+   	loginPage.clickBtnLogin();
+       extentTest.log(LogStatus.PASS, "Klik button login");
+   }
+   
     //Test Case 1	
-    @Given("Berada Di Halaman Login Sales")
-    public void Isi_username() {
-    	driver.get(Constants.URL);
-        extentTest.log(LogStatus.PASS,"User masuk Web login Siloam");
-    }
-    @When("Isi username")
-    public void isi_username() {
-    	 loginPage.usernameA("D6200927");
-         extentTest.log(LogStatus.PASS, "Isi username benar");
-    }
-    @When("Isi password")
-    public void isi_password() {
-    	 loginPage.passwordA("D6200927");
-         extentTest.log(LogStatus.PASS, "Isi password benar");
-    }
-    @When("Klik button login")
-    public void klik_button_login() {
-    	loginPage.clickBtnLogin();
-        extentTest.log(LogStatus.PASS, "Klik button login");
-    }
-    @Then("Masuk Ke Halaman Home Sales")
-    public void masuk_ke_halaman_Home_Admin() {
-    	Assert.assertEquals(loginPage.getTxtDashbaord(),"Home");
-    	extentTest.log(LogStatus.PASS, "Masuk Ke Halaman Home Sales");
-    	driver.close();
-    }
+   @Given("Berada Di Halaman Login Sales")
+   public void Berada_Di_Halaman_Login_Sales() {
+   	driver.get(Constants.URL);
+       extentTest.log(LogStatus.PASS,"Berada Di Halaman Login Sales");
+   }
+   @When("Isi username kosong pada Sales")
+   public void Isi_username_kosong_pada_Sales() {
+   	 loginPage.usernameA("");
+        extentTest.log(LogStatus.PASS, "Isi username kosong pada Sales");
+   }
+   @When("Isi password kosong pada Sales")
+   public void Isi_password_kosong_pada_Admin() {
+   	 loginPage.passwordA("");
+        extentTest.log(LogStatus.PASS, "Isi password kosong pada Sales");
+   }
+   //Test Case 2
+   @When("Isi password salah pada Sales")
+   public void Isi_password_salah_pada_Sales() {
+   	 loginPage.passwordA("qwerty123");
+        extentTest.log(LogStatus.PASS, "Isi password salah pada Sales");
+   }
+
+   //Test Case 3
+   @When("Isi username salah pada Sales")
+   public void Isi_username_salah_pada_Sales() {
+   	 loginPage.usernameA("qwerty123");
+        extentTest.log(LogStatus.PASS, "Isi username salah pada Sales");
+   }
+
+   //Test Case 5
+   @When("Isi password benar pada Sales")
+   public void Isi_password_benar_pada_Sales() {
+   	 loginPage.passwordA("1997-10-23");
+        extentTest.log(LogStatus.PASS, "Isi username salah pada Admin");
+   }
+   //Test Case 6
+   @When("Isi username benar pada Sales")
+   public void Isi_username_benar_pada_Sales() {
+   	 loginPage.usernameA("D6200927");
+        extentTest.log(LogStatus.PASS, "Isi username salah pada Sales");
+   }
+   //Test Case 7
+   
+   //Test Case 8
+    
+   //Test Case 9
+   @Then("Masuk Ke Halaman Home Sales")
+   public void Masuk_Ke_Halaman_Home_Sales() {
+   	Assert.assertEquals(loginPage.getTxtDashbaordS(),"Home");
+   	extentTest.log(LogStatus.PASS, "Masuk Ke Halaman Home Sales");
+   }
 }
 
