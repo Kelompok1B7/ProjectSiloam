@@ -72,6 +72,7 @@ public void klik_button_foto_ttd_digital() {
     Actions actions = new Actions(driver);
     actions.moveByOffset(50, 50).click();
     actions.build().perform();
+    Hooks.delay(2);
     UploadPage.clickBtnTTD();
     // Write code here that turns the phrase above into concrete actions
 }

@@ -49,17 +49,17 @@ public class InputPages {
     @FindBy(xpath = "//textarea[@id='address']")
     WebElement alamat;
 
-    //span[@id='select2-ktp_city-container']
+//    dropdown
     @FindBy(xpath = "//span[@id='select2-ktp_city-container']")
     WebElement btnKota_Ktp;
 
-    //span[@id='select2-ktp_city-container']
+//   mengisi data jakarta timur
     @FindBy(xpath = "//option[@value='KOTA JAKARTA TIMUR']")
     WebElement btnKota_Ktp2;
 
     //option[@value='KOTA JAKARTA SELATAN']
-    @FindBy(xpath = "//option[@value='KOTA JAKARTA BARAT']")
-    WebElement btnKota_Ktp3;
+//    @FindBy(xpath = "//option[@value='KOTA JAKARTA BARAT']")
+//    WebElement btnKota_Ktp3;
 
     @FindBy(xpath = "//input[@id='origin_faskes']")
     WebElement faskesawal;
@@ -94,26 +94,32 @@ public class InputPages {
     }
 
     public void nama(String nama){
+
         this.nama.sendKeys(nama);
     }
     public void nomorbpjs(String nomorbpjs){
         this.nomorbpjs.sendKeys(nomorbpjs);
     }
     public void nomorktp(String nomorktp){
+
         this.nomorktp.sendKeys(nomorktp);
     }
     public void alamat(String alamat){
+
         this.alamat.sendKeys(alamat);
     }
     public void clickBtnKota_Ktp(){
+
         btnKota_Ktp.click();
     }
     public void clickBtnKota_Ktp2(){
+
         btnKota_Ktp2.click();
     }
-    public void clickBtnKota_Ktp3(){
-        btnKota_Ktp3.click();
-    }
+//    public void clickBtnKota_Ktp3(){
+//
+//        btnKota_Ktp3.click();
+//    }
     public void faskesawal(String faskesawal){
         this.faskesawal.sendKeys(faskesawal);
     }

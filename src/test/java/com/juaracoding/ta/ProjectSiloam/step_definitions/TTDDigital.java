@@ -72,14 +72,14 @@ public class TTDDigital {
     }
     @And("User select kota KTP")
     public void user_select_kota_ktp() {
-        TTDPage.btnkota_ktp1();
+        TTDPage.clickBtnKota_Ktp();
         extentTest.log(LogStatus.PASS, "User select kota KTP");
         // Write code here that turns the phrase above into concrete actions
     }
 
     @And("User click kota KTP")
     public void user_click_kota_ktp() {
-        TTDPage.btnkota_ktp2();
+        TTDPage.clickBtnKota_Ktp2();
         extentTest.log(LogStatus.PASS, "user select kota ktp");
     }
     @And("User mengubah faskes awal")

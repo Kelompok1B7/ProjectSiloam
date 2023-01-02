@@ -43,30 +43,29 @@ public class TTDdigialPage {
         no_ktp.clear();
         no_ktp.sendKeys("8224532123456736");
     }
+
     @FindBy(xpath = "//textarea[@id='address']")
     WebElement alamat;
     public void updatealamat(){
         alamat.clear();
         alamat.sendKeys("JL.H.Sanan");
     }
-//    @FindBy(xpath = "//*[@id=\"select2-ktp_city-container\"]")
-    @FindBy(xpath = "//span[@id='select2-ktp_city-container']")
-    WebElement btnkota_ktp1;
+    //    dropdown
+    @FindBy(xpath = "")
+    WebElement btnKota_Ktp;
 
-//    @FindBy(xpath = "//*[@id=\"select2-ktp_city-result-6862-KOTA JAKARTA SELATAN\"]")
-    @FindBy(xpath = "//*[@id=\"select2-ktp_city-result-ol0s-KABUPATEN BOGOR\"]")
-    WebElement btnkota_ktp2;
+    //   mengisi data jakarta timur
+    @FindBy(xpath = "//option[@value='KOTA JAKARTA TIMUR']")
+    WebElement btnKota_Ktp2;
 
-    public void btnkota_ktp1(){
-        btnkota_ktp1.click();
+    public void clickBtnKota_Ktp(){
+
+        btnKota_Ktp.click();
     }
-    public void btnkota_ktp2(){
-        btnkota_ktp2.click();
+    public void clickBtnKota_Ktp2(){
+
+        btnKota_Ktp2.click();
     }
-
-
-
-
 
     @FindBy(xpath = "//input[@id='origin_faskes']")
     WebElement faskes_awal;

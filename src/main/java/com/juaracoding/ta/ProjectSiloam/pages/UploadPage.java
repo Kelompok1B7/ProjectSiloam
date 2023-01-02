@@ -32,8 +32,10 @@ public class UploadPage {
     @FindBy(xpath = "//*[@id=\"default-tab-2\"]/div[2]/div/div/a")
     WebElement btnLanjut;
 
-    public void clickBtnOk()
-    { btnOk.click();}
+
+    public void clickBtnOk() {
+        btnOk.click();
+    }
     public void clickBtnAwal(){
         btnAwal.click();
     }
@@ -43,12 +45,15 @@ public class UploadPage {
     public void clickBtnTTD(){
         btnTTD.click();
     }
-    public void clickBtnSimpan(){btnSimpan.click();}
+    public void clickBtnSimpan(){
+        btnSimpan.click();
+    }
 
     public void clickBtnLanjut(){
         btnLanjut.click();
     }
     public void clickBtnChooseAwal(){
+
         btnChoose.sendKeys("E:\\GAMBAR\\B.jpg");
     }
     public void clickBtnChooseTujuan(){

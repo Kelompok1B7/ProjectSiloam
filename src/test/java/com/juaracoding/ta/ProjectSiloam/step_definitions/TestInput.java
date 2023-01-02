@@ -38,10 +38,10 @@ public class TestInput {
     public void ts77_mengisi_semua_field_dengan_benar() {
         inputPage.nama("Elma Lucyana Christine");
 
-        inputPage.nomorbpjs("1900899550656");
+        inputPage.nomorbpjs("1900897678422");
         extentTest.log(LogStatus.PASS, "Nomor BPJS diisi kurang dari 13 karater");
 
-        inputPage.nomorktp("8900900700980976");
+        inputPage.nomorktp("8900903458943787");
 
         inputPage.alamat("Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No.12A, Kebon Jeruk, Kota Jakarta Barat, DKI Jakarta.");
 
