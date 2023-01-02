@@ -1,11 +1,7 @@
 package com.juaracoding.ta.ProjectSiloam.pages;
 
 import com.juaracoding.ta.ProjectSiloam.drivers.DriverSingleton;
-import net.bytebuddy.asm.Advice;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -77,14 +73,14 @@ public class TTDdigialPage {
     @FindBy(xpath = "//span[@id='select2-destination_faskes-container']")
     WebElement updatefaskes_tujuan;
 
-//    @FindBy(xpath = "//input[@role='textbox']")
+    //    @FindBy(xpath = "//input[@role='textbox']")
     @FindBy(xpath = "//*[@id=\"select2-destination_faskes-result-oquz-3||Clinic Bona Indah||Kota Jakarta Selatan\"]")
     WebElement faskes_tujuan2;
 
-   public void faskes(){
-       updatefaskes_tujuan.click();
-       faskes_tujuan2.click();
-   }
+    public void faskes(){
+        updatefaskes_tujuan.click();
+        faskes_tujuan2.click();
+    }
     @FindBy(xpath = "//textarea[@id='reason']")
     WebElement alasan;
     public void updatealasan(){
@@ -98,5 +94,6 @@ public class TTDdigialPage {
         btnSimpan.click();
     }
 }
+
 
 
