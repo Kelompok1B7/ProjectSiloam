@@ -277,7 +277,7 @@ public class TestInput {
     }
     @Then("TS29_Validasi")
     public void ts29_validasi() {
-    	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
+    	Assert.assertEquals(inputPage.getTxtFillAlamat(), "Field Alamat Harus Diisi!");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
     
@@ -320,7 +320,7 @@ public class TestInput {
     }
     @Then("TS33_Validasi")
     public void ts33_validasi() {
-    	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
+    	Assert.assertEquals(inputPage.getTxtSelectItem(), "Please select an item in the list.");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
     
@@ -364,7 +364,7 @@ public class TestInput {
     }
     @Then("TS37_Validasi")
     public void ts37_validasi() {
-    	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
+    	Assert.assertEquals(inputPage.getTxtSelectItem(), "Please select an item in the list.");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
     
@@ -448,7 +448,7 @@ public class TestInput {
     }
     @Then("TS45_Validasi")
     public void ts45_validasi() {
-    	Assert.assertEquals(inputPage.getTxtPleaseFill(), "please fill out this field");
+    	Assert.assertEquals(inputPage.getTxtFillAlasan(), "Field Alasan Harus Diisi!");
     	extentTest.log(LogStatus.PASS, "User Mendapatkan informasi Data tidak boleh kosong");
     }
     
@@ -787,12 +787,11 @@ public class TestInput {
      }
     @When("TS77_Mengisi semua field dengan benar")
     public void ts77_mengisi_semua_field_dengan_benar() {
-    	 inputPage.nama("Elma Lucyana Christine");
+    	 inputPage.nama("Elma Lucyana Christin");
 
-    	 inputPage.nomorbpjs("0546722447780760");
-         extentTest.log(LogStatus.PASS, "Nomor BPJS diisi kurang dari 13 karater");
+    	 inputPage.nomorbpjs("2216337781761");
 
-    	 inputPage.nomorktp("0755019936362666");
+    	 inputPage.nomorktp("1215033935362165");
 
     	 inputPage.alamat("Graha Handaya, Unit Q-S, Jl. Raya Perjuangan No.12A, Kebon Jeruk, Kota Jakarta Barat, DKI Jakarta.");
 
@@ -817,8 +816,9 @@ public class TestInput {
     }
     @Then("TS79_Validasi")
     public void ts79_validasi() {
+    	Assert.assertEquals(inputPage.getTxtUploadDoc(), "UNTUK KE TAHAP SELANJUTNYA, DOKUMEN YANG WAJIB DIUPLOAD HARAP UNTUK DI LENGKAPI !");
     	extentTest.log(LogStatus.PASS, "User Berpindah ke halaman selanjutnya");
-    	driver.close();
+
     }
     
 }
