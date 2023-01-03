@@ -49,9 +49,13 @@ public class InputPage {
    @FindBy(xpath = "//textarea[@id='address']")
    WebElement alamat;
    
+   String txtFillAlamat = "Field Alamat Harus Diisi!";
+   
  //span[@id='select2-ktp_city-container']
    @FindBy(xpath = "//span[@id='select2-ktp_city-container']")
    WebElement btnKota_Ktp;
+   
+   String txtSelectItem = "Please select an item in the list.";
    
  //span[@id='select2-ktp_city-container']
    @FindBy(xpath = "//option[@value='KABUPATEN BANDUNG']")
@@ -75,8 +79,12 @@ public class InputPage {
    @FindBy(xpath = "//textarea[@id='reason']")
    WebElement alasan;
    
+   String txtFillAlasan = "Field Alasan Harus Diisi!";
+   
    @FindBy(xpath = "//button[@type='submit']")
    WebElement btnSimpan_Data;
+   
+   String txtUploadDoc = "UNTUK KE TAHAP SELANJUTNYA, DOKUMEN YANG WAJIB DIUPLOAD HARAP UNTUK DI LENGKAPI !";
    
    
    //TAU BATASAN
@@ -135,4 +143,16 @@ public class InputPage {
         return "please fill out this field";
     }
     
+    public String getTxtFillAlamat(){
+        return "Field Alamat Harus Diisi!";
+    }
+    public String getTxtSelectItem(){
+        return "Please select an item in the list.";
+    }
+    public String getTxtFillAlasan(){
+        return "Field Alasan Harus Diisi!";
+    }
+    public String getTxtUploadDoc(){
+        return "UNTUK KE TAHAP SELANJUTNYA, DOKUMEN YANG WAJIB DIUPLOAD HARAP UNTUK DI LENGKAPI !";
+    }
 }
